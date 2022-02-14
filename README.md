@@ -31,16 +31,16 @@ It will run the experiments according to the [constants.py](utils/constants.py) 
 
 You can setup the configuration in the [constants.py](utils/constants.py) python file.
 In particular, you may need to modify:
-* $PATH_DATA$: path to the folder where the UCR Archive is
-* $PATH_OUT$: path to the folder where results will be saved
-* $CLASSIFIERS$: list of classifiers to consider among 'teacher', 'StudentAlone' and 'Student'
-* $BEST_TEACHER_ONLY$: set to True if you want to consider only the best teacher (in training) in while distilling to the student
-* $ALPHALIST$: list of different alpha hyper-parameter to consider
-* $TEMPERATURELIST$: list of different temperature hyper-parameter to consider
-* $FILTERS$: list of number of filters to consider in first and third layers of student architectures
-* $FILTERS2$: list of number of filters to consider in second layer of student architectures
-* $LAYER$: number of layers to consider in student architectures
-* $SEPARABLE_CONV$: set to True if you want to use depthwise separable convolutions
+* PATH_DATA: path to the folder where the UCR Archive is
+* PATH_OUT: path to the folder where results will be saved
+* CLASSIFIERS: list of classifiers to consider among 'teacher', 'StudentAlone' and 'Student'
+* BEST_TEACHER_ONLY: set to True if you want to consider only the best teacher (in training) in while distilling to the student
+* ALPHALIST: list of different alpha hyper-parameter to consider
+* TEMPERATURELIST: list of different temperature hyper-parameter to consider
+* FILTERS: list of number of filters to consider in first and third layers of student architectures
+* FILTERS2: list of number of filters to consider in second layer of student architectures
+* LAYER: number of layers to consider in student architectures
+* SEPARABLE_CONV: set to True if you want to use depthwise separable convolutions
 
 ### Steps
 If you want to reproduce the experiments of the paper for a particular configuration:
