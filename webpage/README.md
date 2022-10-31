@@ -2,7 +2,8 @@
 
 This is the template of the companion page available [here](https://maxime-devanne.com/pages/kdFCN-4-tsc/).
 This template is inspired from [this repo](https://github.com/nerfies/nerfies.github.io).
-If you use these templates, please to refer to both links in the footer of your page.
+
+**If you use these templates, please to refer to both links in the footer of your page.**
 
 ## Dynamic content
 
