@@ -1,0 +1,190 @@
+<head>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+
+        <!--/ Student. -->
+        <h3 class="title is-4">Comparing student architectures</h3>
+        <div class="content has-text-justified">
+          <p>
+            We can assess the impact of knowledge distillation by comparing a <span class="text-green">student model</span> trained with knowledge distillation with its equivalent <span class="text-violet">student alone model</span> trained without knowledge distillation.
+            The Win/Tie/Loss plot is used for comparing models' performances on the UCR archive datasets.
+          </p>
+          <p>
+            Use the sliders below to change the complexity of the student models.
+          </p>
+          <h5>Number of filters</h5>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-2"></div>
+          <div class="column is-8 interpolation-video-column">
+            <div>
+              Number of trainable parameters: <span id="nb-params-filters"></span>
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="student-filter-slider"
+                   step="1" min="0" max="9" value="0" type="range">
+          </div>
+          <div class="column is-2"></div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-8 has-text-centered">
+            <p>Student architecture</p>
+          </div>
+          <div class="column is-4 has-text-centered">
+            <p>Win/Tie/Loss</p>
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-7 has-text-centered">
+            <div id="student_filter_archi-image-wrapper">
+            <img src="./static/images/student_filter_1.png"
+                 class="interpolation-image"
+                 alt="architecture."/>
+            </div>
+          </div>
+          <div class="column is-5 has-text-centered">
+            <div id="student_filter_wtl-image-wrapper">
+            <img src="./static/images/filters_acc_model1_UCR112.png"
+                 class="interpolation-image"
+                 alt="win/tie/loss plot."/>
+            </div>
+          </div>
+        </div>
+        <div class="content has-text-justified">
+          <h5>Number of layers</h5>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-4"></div>
+          <div class="column is-4 interpolation-video-column">
+            <div>
+              Number of trainable parameters: <span id="nb-params-layers"></span>
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="student-layer-slider"
+                   step="1" min="0" max="2" value="0" type="range">
+          </div>
+          <div class="column is-4"></div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-8 has-text-centered">
+            <p>Student architecture</p>
+          </div>
+          <div class="column is-4 has-text-centered">
+            <p>Win/Tie/Loss</p>
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-7 has-text-centered">
+            <div id="student_layer_archi-image-wrapper">
+            <img src="./static/images/student_layer_1.png"
+                 class="interpolation-image"
+                 alt="architecture."/>
+            </div>
+          </div>
+          <div class="column is-5 has-text-centered">
+            <div id="student_layer_wtl-image-wrapper">
+            <img src="./static/images/layers_acc_model1_UCR112.png"
+                 class="interpolation-image"
+                 alt="win/tie/loss plot."/>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <!--/ Teacher. -->
+        <h3 class="title is-4">Comparison with the teacher</h3>
+        <div class="content has-text-justified">
+          <p>
+            While the main aim of knowledge distillation is not to improve the performance, we show that, in some cases for some datasets, the <span class="text-green">student model</span> performs better than its <span class="text-orange">teacher model</span>.
+            The Win/Tie/Loss plot is used for comparing models' performances on the UCR archive datasets.
+          </p>
+          <p>
+            Use the sliders below to change the complexity of the student model.
+          </p>
+          <h5>Number of filters</h5>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-2"></div>
+          <div class="column is-8 interpolation-video-column">
+            <div>
+              Number of trainable parameters: <span id="nb-params-filters-teacher"></span>
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="teacher-filter-slider"
+                   step="1" min="0" max="9" value="0" type="range">
+          </div>
+          <div class="column is-2"></div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-8 has-text-centered">
+            <p>Student architecture</p>
+          </div>
+          <div class="column is-4 has-text-centered">
+            <p>Win/Tie/Loss</p>
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-7 has-text-centered">
+            <div id="teacher_filter_archi-image-wrapper">
+            <img src="./static/images/student_filter_1.png"
+                 class="interpolation-image"
+                 alt="architecture."/>
+            </div>
+          </div>
+          <div class="column is-5 has-text-centered">
+            <div id="teacher_filter_wtl-image-wrapper">
+            <img src="./static/images/filters_acc_model1_UCR112.png"
+                 class="interpolation-image"
+                 alt="win/tie/loss plot."/>
+            </div>
+          </div>
+        </div>
+        <div class="content has-text-justified">
+          <h5>Number of layers</h5>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-4"></div>
+          <div class="column is-4 interpolation-video-column">
+            <div>
+              Number of trainable parameters: <span id="nb-params-layers-teacher"></span>
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="teacher-layer-slider"
+                   step="1" min="0" max="2" value="0" type="range">
+          </div>
+          <div class="column is-4"></div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-8 has-text-centered">
+            <p>Student architecture</p>
+          </div>
+          <div class="column is-4 has-text-centered">
+            <p>Win/Tie/Loss</p>
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <div class="column is-7 has-text-centered">
+            <div id="teacher_layer_archi-image-wrapper">
+            <img src="./static/images/student_layer_1.png"
+                 class="interpolation-image"
+                 alt="architecture."/>
+            </div>
+          </div>
+          <div class="column is-5 has-text-centered">
+            <div id="teacher_layer_wtl-image-wrapper">
+            <img src="./static/images/layers_acc_model1_teacher_UCR112.png"
+                 class="interpolation-image"
+                 alt="win/tie/loss plot."/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

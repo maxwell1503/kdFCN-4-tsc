@@ -1,0 +1,35 @@
+{
+	"title": "A study of Knowledge Distillation in Fully Convolutional Network for Time Series Classification",
+	"authors": [
+		{
+			"name": "Emel Ay",
+			"link": "https://fr.linkedin.com/in/emel-ay-albrecht-bb903718",
+			"institution_id": "1"
+		},
+		{
+			"name": "Maxime Devanne",
+			"link": "https://maxime-devanne.com/",
+			"institution_id": "1"
+		},
+		{
+			"name": "Jonathan Weber",
+			"link": "https://www.jonathan-weber.eu/",
+			"institution_id": "1"
+		},
+		{
+			"name": "Germain Forestier",
+			"link": "https://germain-forestier.info/",
+			"institution_id": "1"
+		}
+	],
+	"institutions": ["Université de Haute-Alsace, Mulhouse, France"],
+	"pdf_link": "https://maxime-devanne.com/publis/ay_IJCNN2022.pdf",
+	"doi_link": "https://doi.org/10.1109/IJCNN55064.2022.9892915",
+	"slides_link": "https://maxime-devanne.com/presentations/devanne_kdFCN-4-tsc_IJCNN2022.pdf",
+	"code_link": "https://github.com/maxwell1503/kdFCN-4-tsc",
+	"abstract": "<p>In this work, we introduce and explore the concept of knowledge distillation for the specific task of Time Series Classification.</p><p>We assess the impact of reducing the number of parameters in student models while leveraging teacher performance through knowledge distillation. In particular, we investigate the reduction of the number of convolutional filters and convolutional layers, as well as the use of depthwise separable convolutions instead of traditional convolutions.</p><p>The experimental evaluation carried out on the UCR archive 2018 suggests that intermediately complex student architectures can benefit from a deeper teacher’s knowledge. In particular, we show that our architecture allows to significantly reduce the total number of parameters by a factor of about 38 while preserving relatively good performances in comparison to a more complex teacher model. Moreover, our experiments showed that knowledge distillation has a major impact on student models robustness to random initialisation among different runs. This is particularly crucial when models are deployed in real-world scenarios.</p>",
+	"image_overview": "./static/images/kd_schema.png",
+	"caption_overview": "Knowledge distillation architecture for time series classification",
+	"external_htmls": ["results.html"],
+	"acknowledgment": "This work was supported by the ANR TIMES project (grant ANR-17- CE23-0015) of the French Agence Nationale de la Recherche. The authors would like to acknowledge the High Performance Computing Center of the University of Strasbourg for supporting this work by providing scientific support and access to computing resources. Part of the computing resources were funded by the Equipex Equip@Meso project (Programme Investissements d’Avenir) and the CPER Alsacalcul/Big Data. The authors would also like to thank the creators and providers of the UCR archive."
+}
